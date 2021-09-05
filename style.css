@@ -1,82 +1,75 @@
-body{
-    display: block;
-    margin: auto;
-    width: 500px;
-    margin-top:10px;
+body {
+  display: block;
+  margin: auto;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 0px;
+  animation: fadeIn 1s;
+  border: 1px solid black;
+}
+
+#boardOuter {
+  height: 225px;
+  width: 225px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  margin: auto;
+}
+
+#boardInner {
+  width: 200px;
+  height: 200px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 32px;
+  margin-top: 100px;
+}
+
+#numberContainer {
+  position: absolute;
+  width: 300px;
+  height: 25px;
+  margin-left: 32px;
+}
+
+#letterContainer {
+  position: absolute;
+  margin-top: 102px;
+  width: 23px;
+  /* display: inline-block; */
+  height: 200px;
+  /* margin-top:1px; */
+}
+
+.label {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  width: 300px;
+  height: 30px;
+}
+.selected {
+  background-color: "black";
+  border: 1px solid white;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: rotateY(180deg);
   }
-  
-  .square{
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    margin: 0px;
-    animation: fadeIn 1s;
-    border: 1px solid black;
+  100% {
+    transform: rotateY(0deg);
   }
-  
-  #boardOuter{
-    height: 225px;
-    width: 225px;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    margin: auto;
-  }
-  
-  #boardInner{
-    
-    width: 200px;
-    height: 200px;
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: 32px;
-    margin-top: 100px;
-  }
-  
-  #numberContainer{ 
-      position: absolute;
-   width: 300px;
-   height: 25px;
-   margin-left:32px;
-  }
-  
-  #letterContainer{
-    position: absolute;
-    margin-top: 102px;
-    width: 23px;
-    /* display: inline-block; */
-    height: 200px;
-    /* margin-top:1px; */
-  }
-  
-  .label {
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .row{
-    display: flex;
-    width: 300px;
-    height: 30px;
-  }
-  .selected{
-    background-color:'black';
-    border: 1px solid white;
-  }
-  /* .el3{
-      background-color: aliceblue;
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-      justify-content: flex-start;
-  } */
-  
-  @keyframes fadeIn {
-    0%{
-      transform: rotateY(180deg);
-    } 100% {
-     transform: rotateY(0deg);
-    }
-  }
+}
