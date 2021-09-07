@@ -76,10 +76,11 @@ renderLabels = () => {
 
 renderBoard1();
 
-for (var i = 0; i < 11; i++) {
+for (var i = 0; i < 10; i++) {
   for (var j = 0; j < 10; j++) {
+    console.log(board.childNodes[i]) ;
     board.childNodes[i].childNodes[j].addEventListener("click", function () {
-      console.log(this.id);
+      
       if (userInp[this.id] == 0) {
         this.style.backgroundColor = "black";
         this.style.border = "1px solid white";
