@@ -78,7 +78,7 @@ renderBoard1();
 
 for (var i = 0; i < 10; i++) {
   for (var j = 0; j < 10; j++) {
-    console.log(board.childNodes[i]) ;
+   
     board.childNodes[i].childNodes[j].addEventListener("click", function () {
       
       if (userInp[this.id] == 0) {
